@@ -1,0 +1,262 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+/* vista movil */
+
+.area{
+
+        display: grid;
+        grid-template-rows: 1fr 2fr 10fr 1fr;  
+        grid-template-areas:   
+            "menu"
+            "filtros" 
+            "seccion-principal"
+            "pie-de-pagina";
+        height: 100vh;
+        background: linear-gradient(#4c72a3, #181f42); 
+           
+}
+
+nav{
+    grid-area: menu;
+       
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.header div{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.header i{
+    font-size: 1.5em; 
+   
+}
+
+.header h4{
+    display: none;
+    cursor: pointer;
+}
+
+.header h4:hover{
+   color: #181f42;
+}
+
+.menu-hamburguesa{
+    border-radius: 0.7em;
+    padding: 0.2em;
+    background: linear-gradient(#4c72a3, #181f42); 
+}
+
+.menu-hamburguesa:hover{
+    cursor: pointer;
+    background: linear-gradient(#181f42, #181f42); 
+}
+
+main{
+    grid-area: seccion-principal;    
+    height: 100%;
+}
+
+.cards {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0 2em 0 2em;
+}
+
+#caja-producto{
+    
+    box-shadow: 1px 2px 12px;
+    gap: 2em;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 0 2em 0 2em;
+    background: linear-gradient(#4c72a3, #181f42);   
+       
+}
+
+.cards img{
+    width: 100%;
+    padding: 1em;
+    border-radius : 10em;
+    
+}
+
+.cards h3{
+    color: white;
+}
+
+.cards button {
+    margin-top: 1em;
+    box-shadow: 1px 2px 12px;
+}
+
+.no-mostrar-mobile {
+
+    display: none;
+
+}
+
+.pagination {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.pagination :hover {
+
+    cursor: pointer;
+    background-color: #181f42 !important;
+    color: white !important;
+    
+}
+
+.caja-pagination{
+   
+    margin-top: 1em;
+    
+    padding: 1em;
+}
+
+section {
+    grid-area: filtros;
+   
+}
+
+.discos{
+    
+    display: flex;
+    flex-direction: column; 
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    
+    
+}
+
+.options {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0 0 15px 0;
+    
+}
+
+
+footer {
+
+    grid-area: pie-de-pagina;
+    color: white;
+    text-align: center;
+
+}
+
+#foot i{
+
+    cursor: pointer;
+
+}
+
+#foot i:hover{
+
+    color: #4c72a3;
+
+}
+
+/* vista escritorio */
+@media (min-width: 576px) {
+
+    .area {
+
+        grid-template-areas: 
+            "menu filtros filtros"
+            "menu seccion-principal seccion-principal"
+            "menu seccion-principal seccion-principal"
+            "pie-de-pagina seccion-principal seccion-principal";
+        grid-template-columns: 2fr 4.5fr 4.5fr;
+        
+    }
+
+.header {
+    display: flex;
+    flex-direction: column;  
+    color: white;
+    text-align: center;
+}
+
+.header h4 {
+    display: block
+}
+
+.no-mostrar-mobile {
+
+    display: initial;
+    
+}
+
+.cards {
+    box-shadow: inset 0 0 15px 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 2em 0 0 2em;
+    height: 65vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.cards h3{
+
+    color: white;
+    font-size: 1rem;
+
+}
+
+.cards img{
+
+    width: 10em;
+    padding: 0.1em;
+    border-radius : 10em;
+      
+}
+
+#caja-producto{
+    
+    box-shadow: 1px 2px 12px;
+    gap: 1em;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0 2em 0 2em !important;
+    background: linear-gradient(#4c72a3, #181f42);   
+       
+}
+
+.menu-hamburguesa{
+
+    display: none;
+}
+
+
+#foot{
+
+    padding: 2em;
+
+}
+
+
+}
